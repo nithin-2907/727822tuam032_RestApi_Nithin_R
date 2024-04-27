@@ -44,6 +44,10 @@ public class Service_1
         existingUser.setNumber(user.getNumber());
         existingUser.setEmail(user.getEmail());
         existingUser.setPassword(user.getPassword());
+        existingUser.setFrom(user.getFrom());
+        existingUser.setTo(user.getTo());
+        existingUser.setDeparture(user.getDeparture());
+        existingUser.setReturnn(user.getReturnn());
         return ab.save(existingUser);
 
         }
