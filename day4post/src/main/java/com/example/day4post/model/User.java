@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="BusBook")
+@Table(name="busbooking")
 public class User
 {
     @Id
@@ -18,26 +18,26 @@ public class User
     private String number;
     private String email;
     private String password;
-    private String from;
-    private String to;
-    private String departure;
-    private String returnn;
-
+    private String fromplace;
+    private String toplace;
+    private String dparturedate;
+    private String returndate;
+    
     public User() {
     }
 
-    public User(int id, String firstname, String lastname, String number, String email, String password, String from,
-            String to, String departure, String returnn) {
+    public User(int id, String firstname, String lastname, String number, String email, String password,
+            String fromplace, String toplace, String dparturedate, String returndate) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
         this.number = number;
         this.email = email;
         this.password = password;
-        this.from = from;
-        this.to = to;
-        this.departure = departure;
-        this.returnn = returnn;
+        this.fromplace = fromplace;
+        this.toplace = toplace;
+        this.dparturedate = dparturedate;
+        this.returndate = returndate;
     }
 
     public int getId() {
@@ -88,37 +88,42 @@ public class User
         this.password = password;
     }
 
-    public String getFrom() {
-        return from;
+    public String getFromplace() {
+        return fromplace;
     }
 
-    public void setFrom(String from) {
-        this.from = from;
+    public void setFromplace(String fromplace) {
+        this.fromplace = fromplace;
     }
 
-    public String getTo() {
-        return to;
+    public String getToplace() {
+        return toplace;
     }
 
-    public void setTo(String to) {
-        this.to = to;
+    public void setToplace(String toplace) {
+        this.toplace = toplace;
     }
 
-    public String getDeparture() {
-        return departure;
+    public String getDparturedate() {
+        return dparturedate;
     }
 
-    public void setDeparture(String departure) {
-        this.departure = departure;
+    public void setDparturedate(String dparturedate) {
+        this.dparturedate = dparturedate;
     }
 
-    public String getReturnn() {
-        return returnn;
+    public String getReturndate() {
+        return returndate;
     }
 
-    public void setReturnn(String returnn) {
-        this.returnn = returnn;
+    public void setReturndate(String returndate) {
+        this.returndate = returndate;
     }
+
+    
+
+    
+
     
 
 }

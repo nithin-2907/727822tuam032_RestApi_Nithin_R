@@ -8,6 +8,6 @@ import com.example.day4post.model.User;
 
 public interface Repository extends JpaRepository<User,Integer>
 {
-    Optional<User> findByEmail(String username);
+    Optional<User> findByEmail(String email);
 }
 

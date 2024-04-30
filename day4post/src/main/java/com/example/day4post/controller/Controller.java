@@ -42,7 +42,7 @@ return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
 @GetMapping("getUser/{email}")
 
 
-public ResponseEntity<?> getUserByEmail(@PathVariable String email) 
+public ResponseEntity<?> getUserByEmail(@PathVariable String email)
 {
 
 Optional<User> user = userService.getModelByEmail(email);
@@ -68,7 +68,7 @@ return new ResponseEntity<>(users, HttpStatus.OK);
 @PutMapping("updateUser/{email}")
 
 
-public ResponseEntity<User> updateUser(@NonNull @PathVariable String email,@RequestBody User updateRequest) 
+public ResponseEntity<User> updateUser(@NonNull @PathVariable String email,@RequestBody User updateRequest)
 {
 
 User updated = userService.updateUser(email, updateRequest);
